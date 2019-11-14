@@ -50,19 +50,19 @@
 
     if (scroH > 84) {
       $(".markdownIt-TOC").addClass("fixed-top");
-      $(".layout-totop").removeClass("d-md-none");
+      $(".layout-totop").addClass("d-md-block");
     } else {
       $(".markdownIt-TOC").removeClass("fixed-top");
-      $(".layout-totop").addClass("d-md-none");
+      $(".layout-totop").removeClass("d-md-block");
     }
 
   });
 
   $('.layout-totop').bind('click', function () {
     $("html,body").animate({
-			scrollTop: 0
-		},
-		800);
+        scrollTop: 0
+      },
+      800);
   });
 
 })(jQuery);

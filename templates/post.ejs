@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<%- include('./includes/head', { siteTitle: `${post.title} - ${themeConfig.siteName}` }) %>
+
+<head>
+  <%- include('./includes/head', { siteTitle: `${post.title} - ${themeConfig.siteName}` }) %>
+  <script type="text/javascript" src='<%= themeConfig.domain %>/media/scripts/zan.js'></script>
+  <script type="text/javascript" src='<%= themeConfig.domain %>/media/scripts/av-min.js'></script>
+  <script type="text/javascript" src='<%= themeConfig.domain %>/media/scripts/Valine.min.js'></script>
+</head>
 
 <body>
   <div class="layout">
@@ -32,7 +38,8 @@
                     </div>
                     <div class="layout-post-content">
                       <div class="layout-post-item">
-                        <% if (themeConfig.showFeatureImage && post.feature) { %> <p class="with-img"><img src="<%= post.feature %>" class="attachment-full size-full wp-post-image"
+                        <% if (themeConfig.showFeatureImage && post.feature) { %> <p class="with-img"><img
+                            src="<%= post.feature %>" class="attachment-full size-full wp-post-image"
                             alt="<%= post.title %>" /></p>
                         <% } %>
                         <%- post.content %>
@@ -40,7 +47,7 @@
                     </div>
                     <div class="layout-post-social">
                       <div class="layout-social-item">
-
+                          <%= post.stats.text %>
                       </div>
                     </div>
                     <% if (typeof commentSetting !== 'undefined' && commentSetting.showComment) { %>
@@ -52,6 +59,23 @@
                     <%- include('./includes/disqus') %>
                     <% } %>
                     <% } %>
+
+
+                    <div class="layout-comments"></div>
+                    <script type="text/javascript">
+                      new Valine({
+                        av: AV,
+                        el: '.layout-comments',
+                        appId: 'uua0c5ANTQJzRbRCPkK70yxt-gzGzoHsz',
+                        appKey: 'gpmuOymtgLbQyAVTsqLCgTWn',
+                        notify: false,
+                        verify: false,
+                        avatar: 'mp',
+                        placeholder: '加入讨论...'
+                      })
+                    </script>
+
+
                   </div>
                 </div>
 
@@ -62,7 +86,7 @@
                     </div>
                   </div>
                 </div>
-                
+
               </div>
             </div>
           </div>
@@ -71,9 +95,10 @@
       </div>
     </div>
 
-    <div class="layout-totop d-md-block d-none"><i class="fa fa-angle-up" aria-hidden="true"></i></div>
+    <div class="layout-totop d-none"><i class="fa fa-angle-up" aria-hidden="true"></i></div>
 
     <%- include('./includes/footer') %>
+
   </div>
 </body>
 

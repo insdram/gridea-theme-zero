@@ -16,7 +16,8 @@
 
 				<div class="footer-copy">
 					<% if (site.customConfig.copy) { %>
-					© <a href="<%= themeConfig.domain %>" title="<%= themeConfig.siteName %>"><%= themeConfig.siteName %></a> . 
+					<span>© <%= site.customConfig.copy %> </span>
+					<a href="<%= themeConfig.domain %>" title="<%= themeConfig.siteName %>"><%= themeConfig.siteName %></a> . 
 					<% } %>
 					<%- themeConfig.footerInfo %>
 				</div>

@@ -1,0 +1,84 @@
+{
+  "name": "Zero",
+  "version": "1.0.0",
+  "author": "nuoea",
+  "repository": "",
+  "customConfig": [{
+      "name": "copy",
+      "label": "开始时间",
+      "group": "首页",
+      "value": "",
+      "type": "input"
+    },
+    {
+      "name": "ga",
+      "label": "跟踪 ID",
+      "group": "谷歌统计",
+      "value": "",
+      "type": "input"
+    },
+    {
+      "name": "rss",
+      "label": "RSS",
+      "group": "社交",
+      "value": "",
+      "type": "input"
+    },
+    {
+      "name": "twitter",
+      "label": "Twitter",
+      "group": "社交",
+      "value": "",
+      "type": "input"
+    },
+    {
+      "name": "github",
+      "label": "Github",
+      "group": "社交",
+      "value": "",
+      "type": "input"
+    },
+    {
+      "name": "telegram",
+      "label": "telegram",
+      "group": "社交",
+      "value": "",
+      "type": "input"
+    },
+    {
+      "name": "douban",
+      "label": "豆瓣",
+      "group": "社交",
+      "value": "",
+      "type": "input"
+    },
+    {
+      "name": "instagram",
+      "label": "Instagram",
+      "group": "社交",
+      "value": "",
+      "type": "input"
+    },
+    {
+      "name": "qq",
+      "label": "QQ",
+      "group": "社交",
+      "value": "",
+      "type": "input"
+    },
+    {
+      "name": "weibo",
+      "label": "微博",
+      "group": "社交",
+      "value": "",
+      "type": "input"
+    },
+    {
+      "name": "weixin",
+      "label": "微信",
+      "group": "社交",
+      "value": "",
+      "type": "input"
+    }
+  ]
+}

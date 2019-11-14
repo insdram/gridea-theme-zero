@@ -1,0 +1,10 @@
+<div class="lauyout-navigation d-none">
+	<div class="layout-navigation-main" role="navigation">
+		<ul class="layout-navigation-list">
+			<% menus.forEach(function (menu) { %>
+			<li class="layout-navigation-item"><a title="<%= menu.name %>" href="<%= menu.link %>"><%= menu.name %></a></li>
+			<% }); %>
+
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,24 @@
+<div class="layout-header">
+
+	<div class="layout-header-main">
+		<div class="container">
+			<div class="layout-header-logo">
+				<a href="<%= themeConfig.domain %>">
+					<img class="logo" src="<%= themeConfig.domain %>/media/images/site_avatar.png?v=<%= site.utils.now %>" alt="">
+				</a>
+			</div>
+			<div class="layout-header-menu d-md-inline-block d-none">
+				<ul class="layout-navigation-list">
+					<% menus.forEach(function (menu) { %>
+					<li class="layout-navigation-item"><a title="<%= menu.name %>" href="<%= menu.link %>"><%= menu.name %></a>
+					</li>
+					<% }); %>
+				</ul>
+			</div>
+			<div class="layout-header-search d-md-inline-block d-none">
+				<span class="menu-icon"></span>
+			</div>
+		</div>
+	</div>
+
+</div>

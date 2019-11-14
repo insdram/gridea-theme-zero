@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<%- include('./includes/head', { siteTitle: themeConfig.siteName }) %>
+</head>
+
+<body>
+	<div class="layout">
+		<%- include('./includes/header') %>
+		<%- include('./includes/menu') %>
+
+		<div class="layout-content">
+			<div class="layout-content-main">
+				<div class="container">
+					<div class="layout-archive">
+						<% let years = []; posts.forEach((item) => { const year = item.date.substring(0, 4); if (!years.includes(year)) { years.push(year); } }); %>
+						<% years.forEach(function(year) { %>
+						<div class="layout-card">
+							<div class="layout-card-header">
+								<div class="layout-card-header-wrapper">
+									<div class="layout-card-header-title"><%- year %></div>
+								</div>
+							</div>
+							<div class="layout-card-body">
+								<div class="layout-card-archive">
+									<% posts.forEach(function(post) { %>
+									<%if (post.date.indexOf(year) !== -1) { %>
+									<div class="layout-card-archive-item">
+											<a class="layout-card-archive-title" href="<%= post.link %>"><%= post.title %></a>
+											<span class="layout-card-archive-time"><%= post.dateFormat %></span>
+									</div>
+									<% } %>
+									<% }); %>
+								</div>
+							</div>
+							
+						</div>
+						<% }); %>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		
+		<%- include('./includes/footer') %>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<%- include('./includes/head', { siteTitle: themeConfig.siteName }) %>
+</head>
+
+<body>
+	<div class="layout">
+		<%- include('./includes/header') %>
+		<%- include('./includes/menu') %>
+
+		<div class="layout-content">
+			<div class="layout-content-main">
+				<div class="container">
+					<div class="layout-links">
+						
+						<div class="layout-card">
+							<div class="layout-card-header">
+                                <div class="layout-card-header-wrapper">
+                                    <div class="layout-card-header-title">标签云集</div>
+                                </div>
+                            </div>
+							<div class="layout-card-body">
+								<div class="layout-card-links">
+									<div class="layout-card-links-list row">
+									    <% site.tags.forEach(function(tag) { %>
+                                        <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                                            <a class="layout-card-links-item" href="<%= tag.link %>" title="<%= tag.name %>">
+                                                <img src="<%= themeConfig.domain %>/images/avatar.png">
+									            <span><%= tag.name %></span>
+                                            </a>
+                                        </div>
+									    <% }); %>
+									</div>
+                                </div>
+                                
+							</div>
+							
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		
+		<%- include('./includes/footer') %>
+	</div>
+</body>
+
+</html>

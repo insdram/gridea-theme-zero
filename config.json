@@ -2,7 +2,7 @@
   "name": "Zero",
   "version": "1.0.0",
   "author": "nuoea",
-  "repository": "",
+  "repository": "https://github.com/insdram/gridea-theme-zero",
   "customConfig": [{
       "name": "copy",
       "label": "开始时间",

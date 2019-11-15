@@ -47,7 +47,10 @@
                     </div>
                     <div class="layout-post-social">
                       <div class="layout-social-item">
-                          <%= post.stats.text %>
+                        <div id="/post/<%= post.fileName %>/" class="leancloud-visitors view" data-flag-title="<%= post.title %>">
+                          <span class="post-meta-item-text">阅读 </span>
+                          <span class="leancloud-visitors-count"></span>
+                        </div>
                       </div>
                     </div>
                     <% if (typeof commentSetting !== 'undefined' && commentSetting.showComment) { %>
@@ -60,21 +63,20 @@
                     <% } %>
                     <% } %>
 
-
                     <div class="layout-comments"></div>
                     <script type="text/javascript">
                       new Valine({
                         av: AV,
                         el: '.layout-comments',
-                        appId: 'uua0c5ANTQJzRbRCPkK70yxt-gzGzoHsz',
-                        appKey: 'gpmuOymtgLbQyAVTsqLCgTWn',
+                        appId: 'e7hSFIsJCyJg2uaQaYDWtesc-MdYXbMMI',
+                        appKey: 'LsdlyJ6vfXjJAk3JYASt5KJ4',
                         notify: false,
                         verify: false,
+                        visitor: true,
                         avatar: 'mp',
                         placeholder: '加入讨论...'
                       })
                     </script>
-
 
                   </div>
                 </div>

@@ -15,8 +15,22 @@
 					<% }); %>
 				</ul>
 			</div>
-			<div class="layout-header-search d-md-inline-block d-none">
-				<span class="menu-icon"></span>
+			<div class="layout-header-item d-none">
+				<span class="layout-header-action layout-header-search">
+					<i class="fa fa-search" aria-hidden="true"></i>
+				</span>
+			</div>
+			<% if (site.customConfig.rss) { %>
+			<div class="layout-header-item d-md-inline-block d-none">
+				<a class="ltem-feed" href="<%= site.customConfig.rss %>">
+					<i class="fa fa-rss" aria-hidden="true"></i>
+				</a>
+			</div>
+			<% } %>
+			<div class="layout-header-nav d-md-none d-inline-block">
+				<div class="layout-header-trigger">
+					<i class="fa fa-bars layout-btn-toggle" aria-hidden="true"></i>
+				</div>
 			</div>
 		</div>
 	</div>

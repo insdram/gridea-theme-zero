@@ -1,0 +1,26 @@
+<div class="layout-swiper">
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <% posts.forEach(function(post,index) { %>
+      <% if (index < 3) { %>
+      <div class="swiper-slide">
+        <a href="<%= post.link %>">
+          <div class="swiper-img" style="background-image: url('<%= post.feature %>')">
+          </div>
+          <div class="swiper-slide-mask"></div>
+        </a>
+      </div>
+      <% return false } %>
+      <% }); %>
+    </div>
+
+    <div class="swiper-button-prev swiper-button">
+      <i class="fa fa-angle-left" aria-hidden='true'></i>
+    </div>
+
+    <div class="swiper-button-next swiper-button">
+      <i class="fa fa-angle-right" aria-hidden='true'></i>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</div>

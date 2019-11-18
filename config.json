@@ -18,6 +18,22 @@
       "type": "input"
     },
     {
+      "name": "valineID",
+      "label": "appId",
+      "group": "valine",
+      "value": "",
+      "type": "input",
+      "note": "请输入appId"
+    },
+    {
+      "name": "valineKey",
+      "label": "appKey",
+      "group": "valine",
+      "value": "",
+      "type": "input",
+      "note": "请输入appKey"
+    },
+    {
       "name": "rss",
       "label": "RSS",
       "group": "社交",

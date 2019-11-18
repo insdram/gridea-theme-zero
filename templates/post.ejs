@@ -3,9 +3,6 @@
 
 <head>
   <%- include('./includes/head', { siteTitle: `${post.title} - ${themeConfig.siteName}` }) %>
-  <script type="text/javascript" src='<%= themeConfig.domain %>/media/scripts/zan.js'></script>
-  <script type="text/javascript" src='<%= themeConfig.domain %>/media/scripts/av-min.js'></script>
-  <script type="text/javascript" src='<%= themeConfig.domain %>/media/scripts/Valine.min.js'></script>
 </head>
 
 <body>
@@ -53,31 +50,11 @@
                         </div>
                       </div>
                     </div>
-                    <% if (typeof commentSetting !== 'undefined' && commentSetting.showComment) { %>
-                    <% if (commentSetting.commentPlatform === 'gitalk') { %>
-                    <%- include('./includes/gitalk') %>
-                    <% } %>
-
-                    <% if (commentSetting.commentPlatform === 'disqus') { %>
-                    <%- include('./includes/disqus') %>
-                    <% } %>
-                    <% } %>
-
+                   
                     <div class="layout-comments"></div>
-                    <script type="text/javascript">
-                      new Valine({
-                        av: AV,
-                        el: '.layout-comments',
-                        appId: 'e7hSFIsJCyJg2uaQaYDWtesc-MdYXbMMI',
-                        appKey: 'LsdlyJ6vfXjJAk3JYASt5KJ4',
-                        notify: false,
-                        verify: false,
-                        visitor: true,
-                        avatar: 'mp',
-                        placeholder: '加入讨论...'
-                      })
-                    </script>
-
+                    <% if (site.customConfig.valineID && site.customConfig.valineKey) { %>
+                      <%- include('./includes/valine') %>
+                    <% } %>
                   </div>
                 </div>
 

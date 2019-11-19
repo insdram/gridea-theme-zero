@@ -44,16 +44,54 @@
                     </div>
                     <div class="layout-post-social">
                       <div class="layout-social-item">
-                        <div id="/post/<%= post.fileName %>/" class="leancloud-visitors view" data-flag-title="<%= post.title %>">
+                        <div id="/post/<%= post.fileName %>/" class="leancloud-visitors view"
+                          data-flag-title="<%= post.title %>">
                           <span class="post-meta-item-text">阅读 </span>
                           <span class="leancloud-visitors-count"></span>
                         </div>
                       </div>
                     </div>
-                   
+
+                    <div class="layout-post-navigation">
+                      <div class="row">
+                        <% if (post.prevPost && post.nextPost) { %>
+                        <div class="post-card col-6">
+                          <a href="<%= post.prevPost.link %>" class="post-link">
+                            <div class="thumb" style="background-image: url('<%= post.prevPost.feature %>');"></div>
+                            <span class="btn-prev"><i class="fa fa-angle-left" aria-hidden='true'></i></span>
+                            <div class="thumb-mask"></div>
+                          </a>
+                        </div>
+                        <div class="post-card col-6">
+                          <a href="<%= post.nextPost.link %>" class="post-link">
+                            <div class="thumb" style="background-image: url('<%= post.nextPost.feature %>');"></div>
+                            <span class="btn-next"><i class="fa fa-angle-right" aria-hidden='true'></i></span>
+                            <div class="thumb-mask"></div>
+                          </a>
+                        </div>
+                        <% } else if (post.prevPost) { %>
+                        <div class="post-card col-12">
+                          <a href="<%= post.prevPost.link %>" class="post-link">
+                            <div class="thumb" style="background-image: url('<%= post.prevPost.feature %>');"></div>
+                            <span class="btn-prev"><i class="fa fa-angle-left" aria-hidden='true'></i></span>
+                            <div class="thumb-mask"></div>
+                          </a>
+                        </div>
+                        <% } else if (post.nextPost) { %>
+                        <div class="post-card col-12">
+                          <a href="<%= post.nextPost.link %>" class="post-link">
+                            <div class="thumb" style="background-image: url('<%= post.nextPost.feature %>');"></div>
+                            <span class="btn-next"><i class="fa fa-angle-right" aria-hidden='true'></i></span>
+                            <div class="thumb-mask"></div>
+                          </a>
+                        </div>
+                        <% } %>
+                      </div>
+                    </div>
+
                     <div class="layout-comments"></div>
                     <% if (site.customConfig.valineID && site.customConfig.valineKey) { %>
-                      <%- include('./includes/valine') %>
+                    <%- include('./includes/valine') %>
                     <% } %>
                   </div>
                 </div>

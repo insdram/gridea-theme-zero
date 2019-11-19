@@ -1,0 +1,33 @@
+.layout-nav {
+	position: relative;
+	overflow: hidden;
+	margin-top: 24px;
+}
+
+.layout-nav .layout-nav-list {
+	display: flex;
+	justify-content: center;
+}
+
+.layout-nav .layout-nav-list .layout-nav-item {
+	position: relative;
+	padding: 0 12px;
+}
+
+.layout-nav .layout-nav-list .layout-nav-item:not(:last-child):after {
+	position: absolute;
+	top: 10px;
+	right: 0;
+	width: 2px;
+	height: 10px;
+	background-color: @border-color;
+	content: "";
+}
+
+.layout-nav .layout-nav-list .layout-nav-item a {
+	display: block;
+	margin: 0 .25rem;
+	padding: .25rem .5rem;
+	color: rgba(0,0,0,.65);
+	font-size: 14px;
+}

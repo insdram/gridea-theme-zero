@@ -27,23 +27,40 @@
 									<% posts.forEach(function(post) { %>
 									<%if (post.date.indexOf(year) !== -1) { %>
 									<div class="layout-card-archive-item">
-											<a class="layout-card-archive-title" href="<%= post.link %>"><%= post.title %></a>
-											<span class="layout-card-archive-time"><%= post.dateFormat %></span>
+										<a class="layout-card-archive-title" href="<%= post.link %>"><%= post.title %></a>
+										<span class="layout-card-archive-time"><%= post.dateFormat %></span>
 									</div>
 									<% } %>
 									<% }); %>
 								</div>
 							</div>
-							
+
 						</div>
 						<% }); %>
 					</div>
+
+
+					<div class="layout-paginator">
+						<div class="paginator">
+
+							<% if (pagination.prev) { %>
+							<a href="<%= pagination.prev %>" class="btn btn-paginator">上一页</a>
+							<% } else { %>
+							<a class="btn disabled btn-paginator">上一页</a>
+							<% } %>
+							<% if (pagination.next) { %>
+							<a href="<%= pagination.next %>" class="btn btn-paginator">下一页</a>
+							<% } else { %>
+								<a class="btn disabled btn-paginator">下一页</a>
+							<% } %>
+						</div>
+					</div>
+
+
 				</div>
 			</div>
 		</div>
 
-
-		
 		<%- include('./includes/footer') %>
 	</div>
 </body>

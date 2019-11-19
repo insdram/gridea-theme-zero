@@ -1,0 +1,50 @@
+.layout-collapse {
+	position: absolute;
+	opacity: 0;
+	z-index: 999;
+	left: 0;
+	width: 100%;
+	height: auto;
+	top: 84px;
+	background-color: @white;
+	transform: translateY(-100%);
+	box-shadow: 0px 5px 60px 0px rgba(17, 58, 93, 0.25);
+	-webkit-transition: -webkit-transform .3s cubic-bezier(.9, 0, .3, .7), opacity .3s cubic-bezier(.9, 0, .3, .7);
+	transition: -webkit-transform .3s cubic-bezier(.9, 0, .3, .7), opacity .3s cubic-bezier(.9, 0, .3, .7);
+	transition: transform .3s cubic-bezier(.9, 0, .3, .7), opacity .3s cubic-bezier(.9, 0, .3, .7);
+	transition: transform .3s cubic-bezier(.9, 0, .3, .7), -webkit-transform .3s cubic-bezier(.9, 0, .3, .7), opacity .3s cubic-bezier(.9, 0, .3, .7);
+}
+
+.layout-collapse.open {
+	opacity: 1;
+	transform: translateY(0);
+	-webkit-transition: -webkit-transform .3s cubic-bezier(.9, 0, .3, .7), opacity .3s cubic-bezier(.9, 0, .3, .7);
+	transition: -webkit-transform .3s cubic-bezier(.9, 0, .3, .7), opacity .3s cubic-bezier(.9, 0, .3, .7);
+	transition: transform .3s cubic-bezier(.9, 0, .3, .7), opacity .3s cubic-bezier(.9, 0, .3, .7);
+	transition: transform .3s cubic-bezier(.9, 0, .3, .7), -webkit-transform .3s cubic-bezier(.9, 0, .3, .7), opacity .3s cubic-bezier(.9, 0, .3, .7);
+}
+
+.layout-collapse ul {
+	position: relative;
+	overflow: hidden;
+	padding: 12px;
+	margin: 24px 0;
+}
+
+.layout-collapse ul li {
+	line-height: 1.5rem;
+	text-align: center;
+	padding: 16px 0;
+}
+
+.layout-collapse ul li:not(:last-child) {
+	border-bottom: 1px dashed @border-color;
+}
+
+.layout-collapse ul li a {
+	color: @font-color
+}
+
+.layout-collapse ul li:hover a {
+	color: @font-main-color
+}

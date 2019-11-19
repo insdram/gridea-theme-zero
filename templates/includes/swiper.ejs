@@ -2,7 +2,7 @@
   <div class="swiper-container">
     <div class="swiper-wrapper">
       <% posts.forEach(function(post,index) { %>
-      <% if (index < 3) { %>
+      <% if (index < 3 ) { %>
       <div class="swiper-slide">
         <a href="<%= post.link %>">
           <div class="swiper-img" style="background-image: url('<%= post.feature %>')">

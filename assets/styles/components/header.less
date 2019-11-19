@@ -1,0 +1,125 @@
+.layout-header {
+  padding: 0;
+  width: 100%;
+  height: 84px;
+  line-height: 84px;
+}
+
+.layout-header-main {
+  position: relative;
+  z-index: 1000;
+  padding: 0;
+  height: 84px;
+  background: @white;
+  box-shadow: 0px 5px 60px 0px rgba(17, 58, 93, 0.1);
+}
+
+.layout-header-main .container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.layout-header-logo {
+  position: relative;
+  display: inline-block;
+  flex: 1 1;
+}
+
+@media (min-width: 768px) {
+  .layout-header-logo {
+    flex: none;
+  }
+}
+
+.layout-header-logo a {
+  display: block;
+  margin-right: 1.5rem;
+  max-width: 96px;
+  font-size: 0;
+}
+
+@media (min-width: 768px) {
+  .layout-header-logo a {
+    max-width: 120px;
+  }
+}
+
+.layout-header-logo a img {
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+}
+
+.layout-header-menu {
+  display: inline-block;
+  flex: 1 1;
+}
+
+.layout-header-menu ul {
+  position: relative;
+  overflow: hidden;
+  margin: 30px 0;
+  padding-left: 1.5rem;
+  border-left: 1px solid @border-color;
+  line-height: 24px;
+}
+
+.layout-header-menu ul li {
+  position: relative;
+  float: left;
+  margin-right: 24px;
+}
+
+.layout-header-menu ul li:before {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background: @light-main-color;
+  content: "";
+  -webkit-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+}
+
+.layout-header-menu ul li:hover:before {
+  right: auto;
+  left: 0;
+  width: 100%;
+}
+
+.layout-header-menu ul li a {
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.layout-header-menu ul li:hover a {
+  color: @light-main-color;
+}
+
+.layout-header-trigger {
+	position: relative;
+	width: 32px;
+	color: rgba(0,0,0,.45);
+	text-align: right;
+	font-size: 18px;
+}
+
+.layout-header-item {
+  position: relative;
+  vertical-align: middle;
+  font-size: 18px;
+  cursor: pointer;
+  a, span {
+    display: block;
+    color: rgba(0,0,0,.25);
+    margin-left: 24px;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    &:hover {
+      color: rgba(0,0,0,.65);
+    }
+  }
+}

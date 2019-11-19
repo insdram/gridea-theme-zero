@@ -25,7 +25,7 @@
 .v a {
 	position: relative;
 	display: inline-block;
-	color: #1890ff;
+	color: @main-color;
 	cursor: pointer;
 }
 
@@ -35,14 +35,14 @@
 	bottom: 0;
 	width: 0;
 	height: 1px;
-	background: #1890ff;
+	background: @main-color;
 	content: "";
 	-webkit-transition: width .3s ease;
 	transition: width .3s ease;
 }
 
 .v a:hover {
-	color: #d7191a;
+	color: @main-color;
 }
 
 .v a:hover:before {
@@ -55,7 +55,7 @@
 	margin: 0;
 	padding: .2em .4em;
 	border-radius: 3px;
-	background-color: #f6f6f6;
+	background-color: #e6f7ff;
 	color: #555;
 	font-size: 85%;
 }
@@ -99,7 +99,7 @@
 	position: relative;
 	overflow: hidden;
 	margin-bottom: 10px;
-	border: 1px solid #f0f0f0;
+	border: 1px solid @border-color;
 }
 
 .v .vwrap input {
@@ -128,8 +128,8 @@
 	overflow: auto;
 	margin-bottom: 10px;
 	max-height: 145px;
-	-webkit-box-shadow: 0 0 1px #f0f0f0;
-	box-shadow: 0 0 1px #f0f0f0;
+	-webkit-box-shadow: 0 0 1px @border-color;
+	box-shadow: 0 0 1px @border-color;
 	text-align: justify;
 	font-size: 18px;
 }
@@ -146,8 +146,8 @@
 
 .v .vwrap .vedit .vpreview {
 	padding: 7px;
-	-webkit-box-shadow: 0 0 1px #f0f0f0;
-	box-shadow: 0 0 1px #f0f0f0;
+	-webkit-box-shadow: 0 0 1px @border-color;
+	box-shadow: 0 0 1px @border-color;
 }
 
 .v .vwrap .vedit .vpreview frame,.v .vwrap .vedit .vpreview iframe,.v .vwrap .vedit .vpreview img {
@@ -168,7 +168,7 @@
 }
 
 .v .vwrap .vheader .vinput:focus {
-	border-bottom-color: #eb5055;
+	border-bottom-color: @main-color;
 }
 
 @media screen and (max-width:520px) {
@@ -236,7 +236,7 @@
 
 .v .vwrap .vmark .valert .vtext {
 	padding: 1em 0;
-	color: #fff;
+	color: @white;
 }
 
 .v .vwrap .vmark .valert .vcode {
@@ -247,8 +247,8 @@
 }
 
 .v .vwrap .vmark .valert .vcode:focus {
-	border-color: #3090e4;
-	background-color: #fff;
+	border-color: @light-main-color;
+	background-color: @white;
 }
 
 @media screen and (max-width:720px) {
@@ -258,7 +258,7 @@
 
 	.v .vwrap .vmark .valert .vtext {
 		padding: 1em 0;
-		color: #fff;
+		color: @white;
 	}
 }
 
@@ -330,13 +330,13 @@
 
 .v .vbtn {
 	display: inline-block;
-	margin-bottom: 0;
+	margin: 0 -1px -1px 0;
 	padding: .5em 1.25em;
 	width: 100%;
 	outline: none;
-	border: 1px solid #1890ff;
-	background: #1890ff;
-	color: #fff;
+	border: 1px solid @main-color;
+	background: @main-color;
+	color: @white;
 	vertical-align: middle;
 	text-align: center;
 	white-space: nowrap;
@@ -359,9 +359,9 @@
 }
 
 .v .vbtn:active,.v .vbtn:hover {
-	border-color: #40a9ff;
-	background-color: #40a9ff;
-	color: #fff;
+	border-color: @light-main-color;
+	background-color: @light-main-color;
+	color: @white;
 }
 
 .v .vempty {
@@ -416,7 +416,7 @@
 	position: relative;
 	display: inline-block;
 	margin-right: .875em;
-	color: #1890ff;
+	color: @main-color;
 	text-decoration: none;
 	font-weight: 500;
 	font-size: .875em;
@@ -429,14 +429,14 @@
 	bottom: 0;
 	width: 0;
 	height: 1px;
-	background: #40a9ff;
+	background: @light-main-color;
 	content: "";
 	-webkit-transition: width .3s ease;
 	transition: width .3s ease;
 }
 
 .v .vlist .vcard .vhead .vnick:hover {
-	color: #40a9ff;
+	color: @light-main-color;
 }
 
 .v .vlist .vcard .vhead .vnick:hover:before {
@@ -480,13 +480,13 @@
 
 .v .vlist .vcard .vh .vmeta .vat {
 	float: right;
-	color: #1890ff;
+	color: @main-color;
 	font-size: .8125em;
 	cursor: pointer;
 }
 
 .v .vlist .vcard .vh .vmeta .vat:hover {
-	color: #40a9ff;
+	color: @light-main-color;
 }
 
 .v .vlist .vcard:last-child .vh {

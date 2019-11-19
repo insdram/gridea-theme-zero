@@ -1,0 +1,200 @@
+.layout-content {
+  margin: 1rem 0 0;
+  padding-top: 0px;
+  min-height: 0;
+  flex: auto;
+}
+
+@media (min-width: 768px) {
+  .layout-content {
+    margin: 24px 24px 0;
+  }
+}
+
+.layout-content-main {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+}
+
+.layout-card {
+  position: relative;
+  box-sizing: border-box;
+  margin: 0 0 1rem;
+  padding: 0;
+  border: 1px solid @border-color;
+  border-radius: 2px;
+  background: @white;
+  color: @font-main-color;
+  list-style: none;
+  font-variant: tabular-nums;
+  font-size: 14px;
+  line-height: 1.5;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+}
+
+.layout-card:hover {
+  border-color: rgba(0, 0, 0, 0.09);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.09);
+}
+
+@media (min-width: 768px) {
+  .layout-card {
+    margin: 0 0 24px;
+  }
+}
+
+.layout-card-header {
+  margin-bottom: -1px;
+  padding: 0 24px;
+  min-height: 48px;
+  border-bottom: 1px solid @border-color;
+  border-radius: 2px 2px 0 0;
+  background: transparent;
+  color: @font-dark-color;
+  font-weight: 500;
+  font-size: 16px;
+  transition: padding 0.3s;
+  zoom: 1;
+}
+
+.layout-card-header-wrapper {
+  display: flex;
+}
+
+.layout-card-header-title {
+  display: flex;
+  overflow: hidden;
+  padding: 16px 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  align-items: center;
+  flex: 1 1;
+}
+
+.layout-card-body {
+  zoom: 1;
+}
+
+.layout-card-body:hover .layout-thumb-mask {
+  opacity: 0.25;
+}
+
+.layout-card-body:hover .layout-card-content .layout-title a {
+  color: @light-main-color;
+}
+
+.layout-card-thumb {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.layout-card-thumb .layout-thumb {
+  width: 100%;
+  height: 8rem;
+  background-position: center;
+  background-size: cover;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  @media (min-width: 576px) {
+    height: 9rem;
+  }
+  @media (min-width: 768px) {
+    height: 10rem;
+  }
+  @media (min-width: 992px) {
+    height: 11rem;
+  }
+  @media (min-width: 1200px) {
+    height: 12rem;
+  }
+}
+
+.layout-thumb-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: @font-main-color;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.layout-card-content {
+  margin: 0;
+  padding: 16px;
+  list-style: none;
+  zoom: 1;
+}
+
+.layout-card-content .layout-title {
+  overflow: hidden;
+  margin: 0 0 8px;
+  padding: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.layout-card-content .layout-title a {
+  color: @font-dark-color;
+}
+
+.layout-card-content .layout-meta {
+  overflow: hidden;
+  margin-top: 8px;
+  padding: 0;
+  color: @font-color;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.layout-card-content .layout-meta .layout-meta-list {
+  display: inline-block;
+  a {
+    color: @font-color;
+    &:hover, &:focus {
+      color: @font-main-color;
+    }
+  }
+}
+
+.layout-paginator {
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+.layout-paginator .paginator {
+	list-style: none;
+  font-size: 16px;
+  text-align: center;
+}
+
+.layout-paginator .paginator .btn {
+  line-height: 36px;
+  height: 36px;
+  margin-bottom: 12px;
+  border-radius: 2px;
+  @media (min-width: 768px) {
+    margin-bottom: 24px;
+  }
+}

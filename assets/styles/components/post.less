@@ -1,0 +1,292 @@
+.layout-post {
+  position: relative;
+  box-sizing: border-box;
+  margin: 0 0 24px;
+  padding: 0;
+}
+
+.layout-post .layout-post-body {
+  position: relative;
+  margin: 0;
+  padding: 24px 0;
+}
+
+.layout-post .layout-post-main {
+  overflow: visible;
+  line-height: 2;
+}
+
+.layout-post .layout-post-header {
+  margin: 0 0 1.6em;
+
+  h1 {
+    margin: 0;
+    color: @font-dark-color;
+    font-weight: 500;
+    font-variant: tabular-nums;
+    font-size: 24px;
+    font-family: Avenir, "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    line-height: 1.5;
+  }
+
+  .layout-post-meta {
+    position: relative;
+    margin: 1rem 0 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid @border-color;
+    font-size: 0;
+
+    .layout-meta-list {
+      position: relative;
+      display: inline-block;
+      padding-right: 24px;
+      color: @font-color;
+      text-align: center;
+      text-transform: capitalize;
+      font-size: 14px;
+      line-height: 22px;
+      cursor: pointer;
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: @font-main-color;
+      }
+    }
+  }
+}
+
+.layout-post .layout-post-content {
+  overflow: visible;
+  margin: 0 0 24px;
+  padding: 0;
+  height: auto;
+  text-align: justify;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.layout-post .layout-post-content ul>li {
+  margin-left: 20px;
+  padding-left: 4px;
+  list-style-type: circle;
+}
+
+.layout-post .layout-post-content img {
+  display: flex;
+  margin: 0 auto;
+  padding: 8px;
+  max-width: 100%;
+  min-width: 100%;
+  border: 1px solid @border-color;
+  -webket-transition: all .3s ease-out;
+  -moz-transition: all .3s ease-out;
+  -ms-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+
+  &:hover {
+    -webkit-box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+    -moz-box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+    box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+    -o-box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+  }
+}
+
+.layout-post-content table {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 1em 0;
+  width: 100%;
+  max-width: 100%;
+  border-style: solid;
+  border-width: 1px;
+  background-color: transparent;
+  line-height: 1.7;
+  border-spacing: 0;
+  word-break: normal;
+}
+
+.layout-post-content table,
+.layout-post-content table tr,
+.layout-post-content table tr td,
+.layout-post-content table tr th {
+  border-color: @border-color;
+}
+
+.layout-post-content table th {
+  background-color: #FDFDFD;
+  font-weight: bold;
+}
+
+.layout-post-content tr th {
+  text-align: left;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+.layout-post-content tr th,
+.layout-post-content tr td {
+  padding: 10px 20px;
+  border-right: 1px solid;
+  border-bottom: 1px solid @border-color;
+}
+
+.layout-post-content tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.layout-post-content tr th:last-child,
+.layout-post-content tr td:last-child {
+  border-right: 0;
+}
+
+.layout-post-content table tbody>tr:nth-child(odd)>td,
+.layout-post-content table tbody>tr:nth-child(odd)>th {
+  background-color: #F9F9F9;
+}
+
+.layout-post .layout-post-sidebar {
+  position: relative;
+  margin: 8px auto;
+  padding: 0;
+}
+
+.layout-post-sidebar .markdownIt-TOC {
+  margin: 0;
+  padding-left: 0 !important;
+  border-left: 1px solid @border-color;
+  list-style: none;
+
+  &.fixed-top {
+    position: fixed;
+    top: 24px;
+  }
+}
+
+.layout-post-sidebar ul li {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+.layout-post-sidebar ul li a {
+  display: block;
+  overflow: hidden;
+  padding: 0 24px;
+  color: @font-main-color;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 36px;
+}
+
+.layout-post-sidebar ul li a.current {
+  margin-left: -1px;
+  border-left: 1px solid @main-color;
+  background-color: white;
+  color: @main-color;
+}
+
+.layout-post-social {
+  position: relative;
+  margin: 1.5rem 0;
+  padding: 1.5rem 0 1rem;
+  border-bottom: 1px solid @border-color;
+  font-size: 0;
+
+  .layout-social-item {
+    position: relative;
+    display: inline-block;
+    color: @font-color;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 14px;
+    line-height: 22px;
+    cursor: pointer;
+  }
+}
+
+.layout-post-navigation {
+  position: relative;
+  overflow: hidden;
+  margin: 0 0 1.5rem;
+
+  .post-card {
+    position: relative;
+    border-radius: 4px;
+
+    &:hover {
+      .post-link {
+        span {
+          opacity: 1;
+        }
+
+        .thumb-mask {
+          opacity: 0.75;
+        }
+      }
+
+    }
+
+    .post-link {
+      position: relative;
+      display: block;
+
+      .thumb {
+        width: 100%;
+        height: 8rem;
+        border-radius: 2px;
+        background-position: center;
+        background-size: cover;
+        -webkit-transition: all 0.3s ease-out;
+        -moz-transition: all 0.3s ease-out;
+        -o-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
+      }
+
+      span {
+        position: absolute;
+        top: 36%;
+        display: block;
+        opacity: 0;
+        overflow: hidden;
+        margin: 0;
+        width: 32px;
+        height: 32px;
+        color: #FFFFFF;
+        text-align: center;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        z-index: 999;
+
+        &.btn-prev {
+          left: 8px;
+        }
+
+        &.btn-next {
+          right: 8px;
+        }
+
+        i {
+          font-size: 24px;
+          vertical-align: middle;
+        }
+      }
+
+      .thumb-mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: @font-main-color;
+        opacity: .25;
+        border-radius: 2px;
+        -webkit-transition: opacity 0.3s ease-in-out;
+        -moz-transition: opacity 0.3s ease-in-out;
+        -o-transition: opacity 0.3s ease-in-out;
+        transition: opacity 0.3s ease-in-out;
+      }
+    }
+  }
+
+}

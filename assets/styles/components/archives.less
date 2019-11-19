@@ -1,0 +1,36 @@
+.layout-card-archive, .layout-card-search {
+  padding: 8px 24px;
+}
+
+.layout-card-archive-item,.layout-card-search-item {
+	position: relative;
+	padding: 16px 0;
+	border-bottom: 1px dashed @border-color;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+	word-break: break-word;
+}
+
+.layout-card-archive-item:last-child,.layout-card-search-item:last-child {
+	border-bottom-width: 0;
+}
+
+.layout-card-archive-item .layout-card-archive-title,.layout-card-search-item .layout-card-search-title {
+	display: inline-block;
+	overflow: hidden;
+	width: 80%;
+	color: @font-dark-color;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.layout-card-archive-item:hover .layout-card-archive-title,.layout-card-search-item:hover .layout-card-search-title {
+	color: @main-color;
+}
+
+.layout-card-archive-item .layout-card-archive-time,.layout-card-search-item .layout-card-search-time {
+	float: right;
+	color: @font-color;
+}

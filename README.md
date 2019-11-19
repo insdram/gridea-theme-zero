@@ -1,1 +1,3 @@
-# gridea-theme-zero
+#### gridea-theme-zero
+
+- fixd index.

@@ -11,10 +11,15 @@
       $(this).siblings('#search_bar').find('input').toggleClass('layout-search-show');
     });
 
-    $(".layout-comments").on('click', 'span.vat',function(){
+    $(".layout-comments").on('click', 'textarea.veditor', function () {
+      $(this).siblings('div.vctrl').addClass("d-block");
+      $(this).parent().siblings('div.vcontrol').addClass("d-block");
+    })
+
+    $(".layout-comments").on('click', 'span.vat', function () {
       $(this).parent('div.vmeta').next("div.vcontent").after($("div.vwrap"));
       $('textarea#veditor').focus();
-  })
+    })
 
   });
 

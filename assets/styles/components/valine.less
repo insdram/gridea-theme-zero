@@ -76,7 +76,7 @@
 .v blockquote {
 	margin: .5em 0;
 	padding: 0 0 0 1em;
-	border-left: 8px solid hsla(0,0%,93%,.5);
+	border-left: 8px solid @border-light-color;
 	color: #666;
 }
 
@@ -87,6 +87,7 @@
 	border: none;
 	font-size: .775em;
 	resize: none;
+	word-wrap: break-word;
 }
 
 .v input[type=checkbox],.v input[type=radio] {
@@ -278,8 +279,10 @@
 
 .v .vinfo .col {
 	display: inline-block;
-	width: 50%;
+	padding-top: 1.5em;
+	width: 100%;
 	vertical-align: middle;
+	text-align: center;
 	font-size: 16px;
 }
 
@@ -320,7 +323,8 @@
 
 .v .veditor {
 	width: 100%;
-	min-height: 8.75em;
+	min-height: 48px;
+	height: 48px;
 	background: transparent;
 	font-size: .875em;
 	resize: vertical;
@@ -547,7 +551,7 @@
 .v .vlist .vcard .vquote {
 	margin-top: 1em;
 	padding-left: 1em;
-	border-left: 1px dashed hsla(0,0%,93%,.5);
+	border-left: 1px dashed @border-light-color;
 	color: #666;
 }
 

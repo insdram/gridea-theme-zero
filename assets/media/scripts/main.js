@@ -11,6 +11,11 @@
       $(this).siblings('#search_bar').find('input').toggleClass('layout-search-show');
     });
 
+    $(".layout-comments").on('click', 'span.vat',function(){
+      $(this).parent('div.vmeta').next("div.vcontent").after($("div.vwrap"));
+      $('textarea#veditor').focus();
+  })
+
   });
 
   $(function () {

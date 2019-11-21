@@ -11,7 +11,7 @@
       $(this).siblings('#search_bar').find('input').toggleClass('layout-search-show');
     });
 
-    $(".layout-comments").on('click', 'textarea.veditor', function () {
+    $(".layout-comments").find( 'textarea#veditor').focus(function(){
       $(this).siblings('div.vctrl').addClass("d-block");
       $(this).parent().siblings('div.vcontrol').addClass("d-block");
     })

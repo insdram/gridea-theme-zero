@@ -17,7 +17,7 @@
 				<div class="footer-copy">
 					<% if (site.customConfig.copy) { %>
 					<span>© <%= site.customConfig.copy %> </span>
-					<a href="<%= themeConfig.domain %>" title="<%= themeConfig.siteName %>"><%= themeConfig.siteName %></a> . 
+					<a href="<%= themeConfig.domain %>" title="<%= themeConfig.siteName %>"><%= themeConfig.siteName %></a> .
 					<% } %>
 					<%- themeConfig.footerInfo %>
 				</div>
@@ -29,3 +29,14 @@
 	<script type="text/javascript" src='<%= themeConfig.domain %>/media/scripts/main.js'></script>
 	<script type="text/javascript" src='<%= themeConfig.domain %>/media/scripts/swiper.js'></script>
 	<script type="text/javascript" src='<%= themeConfig.domain %>/media/scripts/swiper.min.js'></script>
+	<% if (site.customConfig.baidu) { %>
+	<script>
+		var _hmt = _hmt || [];
+		(function () {
+			var hm = document.createElement("script");
+			hm.src = "https://hm.baidu.com/hm.js?<%= site.customConfig.baidu %>";
+			var s = document.getElementsByTagName("script")[0];
+			s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+	<% } %>

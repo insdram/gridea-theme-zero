@@ -11,9 +11,9 @@
       "type": "input"
     },
     {
-      "name": "ga",
+      "name": "baidu",
       "label": "跟踪 ID",
-      "group": "谷歌统计",
+      "group": "百度统计",
       "value": "",
       "type": "input"
     },
